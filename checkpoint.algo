@@ -1,0 +1,27 @@
+ALGORITHM checkpoint_algo
+VAR
+    C:CHAR;
+    NBM:INTEGER := 1; /*NOMBRE MOT*/
+    NBV:INTEGER :=0; /*nombre voyelle*/
+    NBC:INTEGER :=0; /*NOMBRE CARACTERE*/
+BEGIN
+    
+    REPEAT
+        
+        Write("ecrire une phrase");
+        Read(C);
+        
+        IF (  UPCASE(C)='A'OR  UPCASE(C)='E'OR  UPCASE(C)='I'OR UPCASE(C)='O' OR UPCASE(C)='U'OR UPCASE(C)='Y' ) THEN
+            NBV:=NBV+1;
+        
+        IF(C=" ") THEN
+        NBM=NBM+1;
+        END_IF
+
+        NBC:= NBC+1;
+
+        UNTIL (C='.');
+
+    Write("le nombre des mots:", NBM, "le nombre des caracteres dans cette phrase:",NBC,"ainsi que le nombre des voyelle est:",NBV);
+END
+
